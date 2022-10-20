@@ -1,0 +1,31 @@
+stages:
+  - build
+  - test
+  - deploy
+
+construir-ambiente:
+  stage: build
+  script:
+    - echo 'Construindo ambiente'
+
+teste-unitario:
+  stage: test
+  script:
+    -echo 'Rodando testes'
+    - sleep 30
+    - echo 'Testes foram um sucesso'
+
+teste-integracao:
+  stage: test
+  script:
+    -echo 'Rodando teste integração'
+    - sleep 30
+    - echo 'Testes foram um sucesso'
+
+deploy: 
+  stage: deploy
+  script:
+    -echo 'Subindo aplicação'
+    - sleep 30
+    - echo 'Sucesso!!'
+    
